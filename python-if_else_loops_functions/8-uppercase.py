@@ -6,5 +6,7 @@ def uppercase(str):
         else:
             print("{}".format(c), end="")
 
+# test.py
+uppercase = __import__('8-uppercase').uppercase
 uppercase("best")
-uppercase("BESTBEST SCHOOL 98 BATTERY STREETHOLBERTON")
+uppercase("Best School 98 Battery street")
