@@ -6,6 +6,4 @@ def uppercase(str):
         else:
             print("{}".format(c), end="")
 
-# test.py
-uppercase("best")
 uppercase("Best School 98 Battery street")
