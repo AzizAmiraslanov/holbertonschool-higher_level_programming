@@ -7,6 +7,5 @@ def uppercase(str):
             print("{}".format(c), end="")
     print()
 
-print("BEST")
-print("BEST SCHOOL 98 BATTERY STREET")
+
 
