@@ -4,7 +4,6 @@ def print_list_integer(my_list):
         print("{:d}".format(i))
 
 
-print_list_integer([1, 2, 3, 4])
 print_list_integer([1, 2, 3])
 
 
