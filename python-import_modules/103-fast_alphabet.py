@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-__import__("sys").stdout.write((bytes(range(65, 91)) + bytes((10,))).decode())
+__import__(bytes((115, 121, 115))).stdout.buffer.write(bytes(range(65, 91)) + bytes((10,)))
