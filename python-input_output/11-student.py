@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that defines a Student class with serialization and deserialization."""
+"""Module that defines a Student class with JSON support."""
 
 
 class Student:
