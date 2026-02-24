@@ -6,12 +6,8 @@ Arguments:
     2. MySQL password
     3. Database name
 """
-#!/usr/bin/python3
-"""
-This script lists all states from the database hbtn_0e_0_usa using PyMySQL.
-"""
 
-import pymysql  # <-- MySQLdb yerine
+import MySQLdb
 import sys
 
 if __name__ == "__main__":
@@ -20,12 +16,12 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     # Connect to MySQL
-    db = pymysql.connect(
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user="root",
-        password="ENCODEREZIKO007",
-        database="hbtn_0e_0_usa"
+        passwd="ENCODEREZIKO007",
+        db="hbtn_0e_0_usa"
     )
 
     cursor = db.cursor()
