@@ -15,8 +15,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user="root",
-        passwd="root",
+        user=username,
+        passwd=password,
         db=database
     )
 
@@ -34,3 +34,4 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
+    
