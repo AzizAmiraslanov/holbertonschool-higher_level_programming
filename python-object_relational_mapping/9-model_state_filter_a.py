@@ -12,15 +12,20 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     # MySQL serverinə qoşulma
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        username, password, database), pool_pre_ping=True)
+    engine = create_engine(
+        'mysql+mysqldb://{}:{}@localhost/{}'.format(username, password, database),
+        pool_pre_ping=True
+    )
 
     # Session yaradılır
     Session = sessionmaker(bind=engine)
     session = Session()
 
     # 'a' hərfi olan state-ləri filterləyirik
-    states_with_a = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states_with_a = (session.query(State)
+                     .filter(State.name.like('%a%'))
+                     .order_by(State.id)
+                     .all())
 
     for state in states_with_a:
         print(f"{state.id}: {state.name}")
