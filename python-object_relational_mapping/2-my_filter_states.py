@@ -23,9 +23,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # SQL query: case-sensitive N
-    query = ("SELECT * FROM states "
-             "WHERE BINARY name LIKE 'N%' "
-             "ORDER BY id ASC;")
+ query = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC;"
     cursor.execute(query)
 
     results = cursor.fetchall()
